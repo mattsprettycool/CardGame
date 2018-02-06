@@ -18,3 +18,5 @@ MonoBehaviour:
     nisl sed, placerat ipsum. Praesent consectetur leo a velit suscipit, at faucibus
     nisi posuere. Cras ut odio sapien. Suspendisse commodo porttitor tempor. '
   artwork: {fileID: 21300000, guid: 9d7b54e5ac9c5a744877850a1b216826, type: 3}
+  cost: 1
+  myCardCost: 1

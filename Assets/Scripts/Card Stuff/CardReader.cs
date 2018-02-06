@@ -15,6 +15,8 @@ public class CardReader : MonoBehaviour {
                 if (obj.gameObject.tag.Equals("CardName")) obj.gameObject.GetComponent<Text>().text = myCard.cardName;
             foreach (Transform obj in gameObject.GetComponentsInChildren<Transform>())
                 if (obj.gameObject.tag.Equals("CardDescription")) obj.gameObject.GetComponent<Text>().text = myCard.description;
+            foreach (Transform obj in gameObject.GetComponentsInChildren<Transform>())
+                if (obj.gameObject.tag.Equals("CardCostText")) obj.gameObject.GetComponent<Text>().text = ""+myCard.cost;
         }
     }
 }

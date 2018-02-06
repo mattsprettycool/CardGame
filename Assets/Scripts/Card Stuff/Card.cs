@@ -10,4 +10,10 @@ public class Card : ScriptableObject {
 
     public Sprite artwork;
 
+    public int cost;
+
+    public enum costType {Default, Test}
+
+    public costType myCardCost;
+
 }

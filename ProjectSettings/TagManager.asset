@@ -9,6 +9,8 @@ TagManager:
   - CardFace
   - CardName
   - CardDescription
+  - CardCost
+  - CardCostText
   layers:
   - Default
   - TransparentFX
