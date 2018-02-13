@@ -12,8 +12,12 @@ public class Card : ScriptableObject {
 
     public int cost;
 
-    public enum costType {Default, Test}
+    public enum CostType {Default, Test}
 
-    public costType myCardCost;
+    public CostType myCardCost;
 
+    public int CostTypeToEnum()
+    {
+        return (int)myCardCost;
+    }
 }
