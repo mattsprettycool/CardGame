@@ -25,6 +25,7 @@ public class CardEditor : Editor
     public override void OnInspectorGUI()
     {
         var card = target as Card;
+        EditorUtility.SetDirty(card);
 
         GUILayout.BeginHorizontal();
         GUILayout.Label("Card Name:", GUILayout.Width(75));
