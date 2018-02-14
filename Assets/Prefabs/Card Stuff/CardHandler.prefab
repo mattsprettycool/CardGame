@@ -39,8 +39,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardCostImages:
+  - {fileID: 21300000, guid: 61dd145da07fcdd44b91b415469e1815, type: 3}
   - {fileID: 21300000, guid: 4ca95af43a83852498589513600f7c20, type: 3}
   - {fileID: 21300000, guid: cd4400c57802c784c87c0feedf94c504, type: 3}
+  - {fileID: 21300000, guid: 71f13a05c79504d46ad5b3594a22136e, type: 3}
+  - {fileID: 21300000, guid: dbe9267bde4ed7d429e00e16f4233a05, type: 3}
+  - {fileID: 21300000, guid: 782d991bc96ca9140baa335df586523f, type: 3}
 --- !u!224 &224842963529439720
 RectTransform:
   m_ObjectHideFlags: 1

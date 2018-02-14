@@ -12,6 +12,18 @@ TagManager:
   - CardCost
   - CardCostText
   - CardHandler
+  - CardCost1
+  - CardCost2
+  - CardCost3
+  - CardCost4
+  - CardCost5
+  - CardCost6
+  - CardCostText1
+  - CardCostText2
+  - CardCostText3
+  - CardCostText4
+  - CardCostText5
+  - CardCostText6
   layers:
   - Default
   - TransparentFX
