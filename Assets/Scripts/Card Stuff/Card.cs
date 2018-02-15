@@ -23,6 +23,8 @@ public class Card : ScriptableObject {
 
     public enum Materials { None, Munitions, Energy }
 
+    public enum DamageTypes { None, Gun, Explosive}
+
     public int effArrSize = 0;
     public int prevArrSize = 0;
 
@@ -32,6 +34,7 @@ public class Card : ScriptableObject {
 
     //stuff to mostly ignore
     public Materials[] myMaterials = new Materials[0];
+    public DamageTypes[] myDamageTypes = new DamageTypes[0];
     //end
 
     public int curCostCount = 0;
@@ -89,6 +92,15 @@ public class CardEditor : Editor
             GUILayout.Label("Effect Type #" + i + ":", GUILayout.Width(100));
             card.myEffects[i] = (Card.Effects)EditorGUILayout.EnumPopup(card.myEffects[i]);
             GUILayout.EndHorizontal();
+            if ((int)card.myEffects[i] == 1)
+            {
+                GUILayout.BeginHorizontal();
+                GUILayout.Label("Damage Type #" + i + ":", GUILayout.Width(130));
+                card.myDamageTypes[i] = (Card.DamageTypes)EditorGUILayout.EnumPopup(card.myDamageTypes[i]);
+                GUILayout.EndHorizontal();
+            }
+            else
+                card.myDamageTypes[i] = (Card.DamageTypes)0;
             if ((int)card.myEffects[i] == 2)
             {
                 GUILayout.BeginHorizontal();
@@ -118,8 +130,9 @@ public class CardEditor : Editor
         int[] tempMyExtraValues = new int[arrSize];
 
         Card.Materials[] tempMyMaterials = new Card.Materials[arrSize];
+        Card.DamageTypes[] tempMyDamageTypes = new Card.DamageTypes[arrSize];
 
-        for(int i = 0; i < arrSize; i++)
+        for (int i = 0; i < arrSize; i++)
         {
             if (card.myEffects.Length >= i+1)
             {
@@ -128,6 +141,7 @@ public class CardEditor : Editor
                 tempMyExtraValues[i] = card.myExtraValues[i];
 
                 tempMyMaterials[i] = card.myMaterials[i];
+                tempMyDamageTypes[i] = card.myDamageTypes[i];
 
             }
             else
@@ -138,15 +152,16 @@ public class CardEditor : Editor
         card.myExtraValues = new int[arrSize];
 
         card.myMaterials = new Card.Materials[arrSize];
+        card.myDamageTypes = new Card.DamageTypes[arrSize];
 
-        for(int i = 0; i < arrSize; i++)
+        for (int i = 0; i < arrSize; i++)
         {
             card.myEffects[i] = tempMyEffects[i];
             card.myValues[i] = tempMyValues[i];
             card.myExtraValues[i] = tempMyExtraValues[i];
 
             card.myMaterials[i] = tempMyMaterials[i];
-
+            card.myDamageTypes[i] = tempMyDamageTypes[i];
         }
     }
 }
