@@ -1562,7 +1562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 637dbc737fbb2724c864a94e91869086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCard: {fileID: 11400000, guid: 87a413259fef4ef449d16b490e27b3c4, type: 2}
+  myCard: {fileID: 11400000, guid: 0a02e0cae10c44945a333e1ac40e9394, type: 2}
 --- !u!1 &1255095366
 GameObject:
   m_ObjectHideFlags: 0
