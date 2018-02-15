@@ -16,10 +16,11 @@ MonoBehaviour:
   artwork: {fileID: 21300000, guid: 562e8b88e566a6c408f6b1223fda836d, type: 3}
   costs: 020000000a00000000000000000000000000000000000000
   myCardCosts: 050000000400000000000000000000000000000000000000
-  effArrSize: 3
-  prevArrSize: 3
-  myEffects: 010000000200000003000000
-  myValues: 0e0000000000000001000000
-  myExtraValues: 000000000000000000000000
-  myMaterials: 000000000100000000000000
+  effArrSize: 0
+  prevArrSize: 0
+  myEffects: 
+  myValues: 
+  myExtraValues: 
+  myMaterials: 
+  myDamageTypes: 
   curCostCount: 2

@@ -22,4 +22,5 @@ MonoBehaviour:
   myValues: 
   myExtraValues: 
   myMaterials: 
+  myDamageTypes: 
   curCostCount: 2

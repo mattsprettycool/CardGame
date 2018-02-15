@@ -12,14 +12,15 @@ MonoBehaviour:
   m_Name: BasicDamage
   m_EditorClassIdentifier: 
   cardName: Shoot
-  description: Does (1 + x munitions) damage
+  description: Deals 1 gun damage
   artwork: {fileID: 21300000, guid: add7bfb47a1f40c4da63b7df519f917b, type: 3}
   costs: 010000000000000000000000000000000000000000000000
   myCardCosts: 050000000000000000000000000000000000000000000000
-  effArrSize: 2
-  prevArrSize: 2
-  myEffects: 0100000002000000
-  myValues: 0100000000000000
-  myExtraValues: 0000000000000000
-  myMaterials: 0000000001000000
+  effArrSize: 1
+  prevArrSize: 1
+  myEffects: 01000000
+  myValues: 01000000
+  myExtraValues: 00000000
+  myMaterials: 00000000
+  myDamageTypes: 01000000
   curCostCount: 1
