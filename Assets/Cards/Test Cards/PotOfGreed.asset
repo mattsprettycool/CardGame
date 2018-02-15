@@ -22,3 +22,4 @@ MonoBehaviour:
   myValues: 0e0000000000000001000000
   myExtraValues: 000000000000000000000000
   myMaterials: 000000000100000000000000
+  curCostCount: 2

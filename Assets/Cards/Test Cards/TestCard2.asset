@@ -26,3 +26,4 @@ MonoBehaviour:
   myValues: 
   myExtraValues: 
   myMaterials: 
+  curCostCount: 1

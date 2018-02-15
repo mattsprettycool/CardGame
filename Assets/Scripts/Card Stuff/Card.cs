@@ -33,6 +33,8 @@ public class Card : ScriptableObject {
     //stuff to mostly ignore
     public Materials[] myMaterials = new Materials[0];
     //end
+
+    public int curCostCount = 0;
 }
 
 [CustomEditor(typeof(Card))]
@@ -53,7 +55,12 @@ public class CardEditor : Editor
         
         card.artwork = EditorGUILayout.ObjectField("Card Artwork:",card.artwork, typeof(Sprite), false) as Sprite;
 
-        for(int i = 0; i < 6; i++)
+        GUILayout.BeginHorizontal();
+        GUILayout.Label("Number of cost types:", GUILayout.Width(130));
+        card.curCostCount = EditorGUILayout.IntSlider(card.curCostCount, 0, 6);
+        GUILayout.EndHorizontal();
+        if (card.curCostCount > 6) card.curCostCount = 6;
+        for (int i = 0; i < card.curCostCount; i++)
         {
             GUILayout.BeginHorizontal();
             GUILayout.Label("Card Cost #"+i+":", GUILayout.Width(100));
