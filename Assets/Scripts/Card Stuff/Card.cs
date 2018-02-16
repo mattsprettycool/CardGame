@@ -23,7 +23,7 @@ public class Card : ScriptableObject {
 
     public enum Materials { None, Munitions, Energy }
 
-    public enum DamageTypes { None, Gun, Explosive}
+    public enum DamageTypes { None, Gun, Explosive }
 
     public int effArrSize = 0;
     public int prevArrSize = 0;
