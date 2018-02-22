@@ -30,8 +30,19 @@ public class CardReader : MonoBehaviour {
             }
         }
     }
+	void Update () {
+		if (Input.GetMouseButtonDown(1)) {
+			GameObject.Destroy (gameObject);
+		}
+	}
     Sprite SetCostIcon(int costKey)
     {
         return GameObject.FindGameObjectWithTag("CardHandler").GetComponent<CardHandler>().GetCostImage(costKey);
     }
+	public void SetCard(Card cardToSet){
+		myCard = cardToSet;
+	}
+	public void SetScale(float x, float y, float z){
+		gameObject.transform.localScale = new Vector3 (x, y, z);
+	}
 }

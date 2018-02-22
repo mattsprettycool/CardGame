@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 224650067207713450}
+  - component: {fileID: 114037730213358948}
   m_Layer: 5
   m_Name: PosToSpawnCard
   m_TagString: Untagged
@@ -26,6 +27,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114037730213358948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1390142638364794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505d03b1a70ad40d29f0e18ed42c47bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cards:
+  - {fileID: 11400000, guid: ad788439852e1c14eaddccd11a80ebf3, type: 2}
+  - {fileID: 11400000, guid: 0a02e0cae10c44945a333e1ac40e9394, type: 2}
+  - {fileID: 11400000, guid: 366305e13a076164dbc2b90531f9dba6, type: 2}
+  - {fileID: 11400000, guid: 87a413259fef4ef449d16b490e27b3c4, type: 2}
+  - {fileID: 11400000, guid: e41b13cb0ca2249b0a067cdb73f02988, type: 2}
+  cardTemplate: {fileID: 1675942061511178, guid: 9990e785a4158ce4d9b9bea14976565f,
+    type: 2}
 --- !u!224 &224650067207713450
 RectTransform:
   m_ObjectHideFlags: 1
@@ -39,8 +59,8 @@ RectTransform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 50, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.5}
