@@ -14,7 +14,7 @@ public class CardPos : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameObject.GetComponentInChildren<CardReader>().gameObject == null) {
+		if (this.gameObject.GetComponentInChildren<CardReader>().gameObject == null) {
 			GameObject.Destroy (gameObject);
 		}
 	}

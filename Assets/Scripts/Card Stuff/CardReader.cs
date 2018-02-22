@@ -30,10 +30,9 @@ public class CardReader : MonoBehaviour {
             }
         }
     }
-	void Update () {
-		if (Input.GetMouseButtonDown(1)) {
-			GameObject.Destroy (gameObject);
-		}
+	void OnMouseDown(){
+		Debug.Log ("Mouse Down");
+		GameObject.Destroy (gameObject);
 	}
     Sprite SetCostIcon(int costKey)
     {
