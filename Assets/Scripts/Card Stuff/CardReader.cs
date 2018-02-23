@@ -27,13 +27,18 @@ public class CardReader : MonoBehaviour {
                     int arraySpot = int.Parse(obj.gameObject.tag.Substring(8,1))-1;
                     obj.GetComponent<Image>().sprite = SetCostIcon((int)myCard.myCardCosts[arraySpot]);
                 }
+				if (Input.GetMouseButtonDown (0)) {
+					RaycastHit2D hit = Physics2D.Raycast (Input.mousePosition, -Vector2.up, Mathf.Infinity);
+					Debug.Log (hit.point);
+					if (hit.collider != null) {
+						if (hit.collider.gameObject.name == this.gameObject.name) {
+							GameObject.Destroy (this.gameObject);		
+						}
+					}
+				}
             }
         }
     }
-	void OnMouseDown(){
-		Debug.Log ("Mouse Down");
-		GameObject.Destroy (gameObject);
-	}
     Sprite SetCostIcon(int costKey)
     {
         return GameObject.FindGameObjectWithTag("CardHandler").GetComponent<CardHandler>().GetCostImage(costKey);
