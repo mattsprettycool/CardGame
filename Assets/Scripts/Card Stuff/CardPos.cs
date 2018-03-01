@@ -5,9 +5,11 @@ using UnityEngine;
 public class CardPos : MonoBehaviour {
 	public Card[] cards;
 	public GameObject cardTemplate;
+	public Deck d;
 	// Use this for initialization
-	void Start () {
-		cardTemplate.GetComponent<CardReader> ().SetCard (cards [Random.Range(0, cards.Length)]);
+	void Start () { 
+		d = GameObject.FindGameObjectWithTag ("CardHandler").GetComponent<Deck> ();
+		cardTemplate.GetComponent<CardReader> ().SetCard (d.deck[0]);
 		cardTemplate.GetComponent<CardReader> ().SetScale (.5f, .5f, .5f);
 		Instantiate (cardTemplate, gameObject.transform);
 	}

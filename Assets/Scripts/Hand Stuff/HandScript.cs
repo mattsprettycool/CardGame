@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class HandScript : MonoBehaviour {
+	public Card [] handArray = new Card[100];
 	public GameObject posToPutCard;
+	public Deck d;
 	float timer;
 	int numCards;
 	// Use this for initialization
 	void Start () {
+		d = GameObject.FindGameObjectWithTag ("CardHandler").GetComponent<Deck> ();
 		numCards = 0;
 	}
 	
@@ -21,6 +24,7 @@ public class HandScript : MonoBehaviour {
 		}
 	}
 	public void DrawCard(){
+		handArray [numCards] = d.deck [0];
 		numCards++;
 		Instantiate (posToPutCard, gameObject.transform);
 	}
