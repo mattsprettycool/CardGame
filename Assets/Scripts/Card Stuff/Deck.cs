@@ -11,7 +11,7 @@ public class Deck : MonoBehaviour {
     //Maybe this shuffles the deck? Maybe it doesnt
     public void shuffle()
     {
-        if (isEmpty())
+        if (IsEmpty())
         {
             Card[] shuffled = new Card[100];
             for (int i = discard.Length; i > 0; i--)
@@ -27,7 +27,7 @@ public class Deck : MonoBehaviour {
         }//else if(Effect == shuffle) then run the same code, probably just use an or at the top but tell me about effects matt
     }
 
-    public bool isEmpty()
+    public bool IsEmpty()
     {
         bool me = false;
         for(int i = 0; i < deck.Length; i++)
@@ -44,9 +44,19 @@ public class Deck : MonoBehaviour {
         return me;
     }
 
-    public void addCard()
+    public Card AddAndRemoveCard(int indx)
     {
-
+        Card draw;
+        draw = deck[indx];
+                for(int j = indx; j < deck.Length; j++)
+                {
+                    deck[j] = deck[j + 1];
+                    if(deck[j+2] == null)
+                    {
+                        deck[j + 1] = null;
+                    }
+                }
+        return draw;
     }
 
     public void Start()
