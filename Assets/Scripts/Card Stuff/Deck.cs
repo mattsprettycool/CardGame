@@ -11,17 +11,42 @@ public class Deck : MonoBehaviour {
     //Maybe this shuffles the deck? Maybe it doesnt
     public void shuffle()
     {
-        Card[] shuffled = new Card[100];
-        for(int i = deck.Length; i > 0; i--)
+        if (isEmpty())
         {
-            float rnd = Random.Range(0, deck.Length);
-            shuffled[i] = deck[(int)rnd];
-            deck[(int)rnd] = null;
-        }
-        for(int i = shuffled.Length; i > 0; i--)
+            Card[] shuffled = new Card[100];
+            for (int i = discard.Length; i > 0; i--)
+            {
+                float rnd = Random.Range(0, discard.Length);
+                shuffled[i] = discard[(int)rnd];
+                discard[(int)rnd] = null;
+            }
+            for (int i = shuffled.Length; i > 0; i--)
+            {
+                deck[i] = shuffled[i];
+            }
+        }//else if(Effect == shuffle) then run the same code, probably just use an or at the top but tell me about effects matt
+    }
+
+    public bool isEmpty()
+    {
+        bool me = false;
+        for(int i = 0; i < deck.Length; i++)
         {
-            deck[i] = shuffled[i];
+            if(deck[i] == null && deck[i+1] == null)
+            {
+                me = true;
+            }
+            else
+            {
+                me = false;
+            }
         }
+        return me;
+    }
+
+    public void addCard()
+    {
+
     }
 
     public void Start()
