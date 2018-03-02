@@ -57,14 +57,14 @@ public class Deck : MonoBehaviour {
                         deck[98] = deck[99];
                         deck[99] = null;
                     }
-                    else if(deck[j+2] == null)
-                    {
-                        deck[j + 1] = null;
-                    }
                     else
                     {
                         deck[j] = deck[j + 1];
-            }
+			if(deck[j+2] == null)
+                    	{
+                        	deck[j + 1] = null;
+                    	}
+            	}
                 }
         return draw;
     }
