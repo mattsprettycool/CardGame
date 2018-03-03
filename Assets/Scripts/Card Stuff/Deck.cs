@@ -28,24 +28,19 @@ public class Deck : MonoBehaviour {
             }
         }
     }
-    //Checks if the deck has only null spots or not
+
     public bool IsEmpty()
     {
-        bool me = false;
-        for(int i = 0; i < deck.Length; i++)
-        {
-            if(deck[i] == null && deck[i+1] == null)
+            if(deck[0] == null)
             {
-                me = true;
+            return true;
             }
             else
             {
-                me = false;
+            return false;
             }
-        }
-        return me;
     }
-    //Takes a card from the deck array and gets rid of it to the discard
+    
     public Card AddAndRemoveCard(int indx)
     {
         Card draw;
@@ -60,21 +55,20 @@ public class Deck : MonoBehaviour {
                     else
                     {
                         deck[j] = deck[j + 1];
-			if(deck[j+2] == null)
+			            if(deck[j+2] == null)
                     	{
                         	deck[j + 1] = null;
                     	}
-            	}
+            	    }
                 }
         return draw;
     }
-    //tell me if you want this to be void or return a card or something
+
     public void Exhaust(Card ex)
     {
         Card dis = ex;
         exhaust[exhaustIndex] = dis;
         exhaustIndex++;
-        //ill add something where if a new game is started then index is reset but not needed for now
     }
 
     public void Start()
