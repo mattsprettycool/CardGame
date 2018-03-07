@@ -1,0 +1,5 @@
+x space apart = 277
+
+y space apart = 118
+
+for every y+, x offset = 94

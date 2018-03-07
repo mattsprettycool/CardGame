@@ -24,6 +24,9 @@ TagManager:
   - CardCostText4
   - CardCostText5
   - CardCostText6
+  - Tile
+  - start
+  - stop
   layers:
   - Default
   - TransparentFX

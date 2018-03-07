@@ -71,14 +71,14 @@ public class Deck : MonoBehaviour {
         exhaustIndex++;
     }
 
-    public void Start()
+    /*public void Start()
     {
         
-    }
+    }*/
 
-    public void FixedUpdate()
-    {
-        AddAndRemoveCard(0);
-    }
+    //public void FixedUpdate()
+    //{
+        //AddAndRemoveCard(0);
+    //}
 
 }
