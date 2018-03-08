@@ -9,6 +9,7 @@ public class Deck : MonoBehaviour {
     public Card[] discard = new Card[100];
     public Card[] exhaust = new Card[25];
     public int exhaustIndex;
+    public int lastCardSpot;
     private Random randy = new Random();
     //Maybe this shuffles the deck? Maybe it doesnt
     public void shuffle()
@@ -27,6 +28,7 @@ public class Deck : MonoBehaviour {
                 deck[i] = shuffled[i];
             }
         }
+        lastCardSpot = deck.Length - 1;
     }
 
     public bool IsEmpty()
@@ -61,13 +63,35 @@ public class Deck : MonoBehaviour {
                     	}
             	    }
                 }
+        lastCardSpot--;
         return draw;
     }
 
+    public void AddCard(Card c)
+    {
+        deck[lastCardSpot] = c;
+        if(lastCardSpot < 100)
+        {
+            lastCardSpot++;
+        }
+    }
+
+    /*public void RemoveCard(Card c)
+    {
+        for(int i = 0; i < deck.Length; i++)
+        {
+            if(c = deck[i])
+            {
+                AddAndRemoveCard(i);
+                break;
+            }
+        }
+    }*/
+
     public void Exhaust(Card ex)
     {
-        Card dis = ex;
-        exhaust[exhaustIndex] = dis;
+        exhaust[exhaustIndex] = ex;
+        //RemoveCard(ex);
         exhaustIndex++;
     }
 
