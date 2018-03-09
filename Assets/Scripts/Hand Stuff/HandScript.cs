@@ -8,7 +8,7 @@ public class HandScript : MonoBehaviour {
 	public GameObject posToPutCard;
 	public Deck d;
 	float timer;
-	int numCards;
+	public int numCards;
 	// Use this for initialization
 	void Start () {
 		d = GameObject.FindGameObjectWithTag ("CardHandler").GetComponent<Deck> ();
@@ -24,8 +24,10 @@ public class HandScript : MonoBehaviour {
 		}
 	}
 	public void DrawCard(){
-		handArray [numCards] = d.deck [0];
-		numCards++;
+		handArray [numCards] = d.AddAndRemoveCard (0);
 		Instantiate (posToPutCard, gameObject.transform);
+		numCards++;
+
+
 	}
 }

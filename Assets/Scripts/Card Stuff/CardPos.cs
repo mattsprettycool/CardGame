@@ -5,13 +5,15 @@ using UnityEngine;
 public class CardPos : MonoBehaviour {
 	public Card[] cards;
 	public GameObject cardTemplate;
+	public HandScript hand;
 	public Deck d;
 	// Use this for initialization
 	void Start () { 
 		d = GameObject.FindGameObjectWithTag ("CardHandler").GetComponent<Deck> ();
-		cardTemplate.GetComponent<CardReader> ().SetCard (d.deck[0]);
-		cardTemplate.GetComponent<CardReader> ().SetScale (.5f, .5f, .5f);
-		Instantiate (cardTemplate, gameObject.transform);
+		hand = GameObject.FindGameObjectWithTag ("Hand").GetComponent<HandScript> ();
+		GameObject cardo = Instantiate (cardTemplate, gameObject.transform);
+		cardo.GetComponent<CardReader> ().SetCard (hand.handArray [hand.numCards]);
+		cardo.GetComponent<CardReader> ().SetScale (.5f, .5f, .5f);
 	}
 	
 	// Update is called once per frame

@@ -38,12 +38,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505d03b1a70ad40d29f0e18ed42c47bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 11400000, guid: ad788439852e1c14eaddccd11a80ebf3, type: 2}
-  - {fileID: 11400000, guid: 0a02e0cae10c44945a333e1ac40e9394, type: 2}
-  - {fileID: 11400000, guid: 366305e13a076164dbc2b90531f9dba6, type: 2}
-  - {fileID: 11400000, guid: 87a413259fef4ef449d16b490e27b3c4, type: 2}
-  - {fileID: 11400000, guid: e41b13cb0ca2249b0a067cdb73f02988, type: 2}
+  carb: {fileID: 0}
   cardTemplate: {fileID: 1675942061511178, guid: 9990e785a4158ce4d9b9bea14976565f,
     type: 2}
 --- !u!224 &224650067207713450
