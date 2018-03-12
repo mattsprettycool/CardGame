@@ -17,7 +17,7 @@ public class Card : ScriptableObject {
 
     public CostType[] myCardCosts = new CostType[6];
 
-    public int[,] encodedEffectArray;
+    public int[,] encodedEffectArray = new int[100,3];
 
     public enum Effects { None, NumericalDamage, MaterialBasedDamage, Draw, Heal }
 
@@ -85,7 +85,6 @@ public class CardEditor : Editor
             UpdateEncodedArrays(card.effArrSize);
             card.prevArrSize = card.effArrSize;
         }
-        card.encodedEffectArray = new int[card.effArrSize,3];
         for(int i = 0; i < card.effArrSize; i++)
         {
             GUILayout.BeginHorizontal();
