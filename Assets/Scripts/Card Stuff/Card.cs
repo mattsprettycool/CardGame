@@ -19,6 +19,10 @@ public class Card : ScriptableObject {
 
     public int[,] encodedEffectArray = new int[100,3];
 
+    public int[] effectTypeArr = new int[100];
+    public int[] mod1Arr = new int[100];
+    public int[] mod2Arr = new int[100];
+
     public enum Effects { None, NumericalDamage, MaterialBasedDamage, Draw, Heal }
 
     public enum Materials { None, Munitions, Energy }
@@ -113,9 +117,9 @@ public class CardEditor : Editor
             GUILayout.Label("Effect Modifier #" + i + ":", GUILayout.Width(150));
             card.myValues[i] = EditorGUILayout.IntField(card.myValues[i]);
             GUILayout.EndHorizontal();
-            card.encodedEffectArray[i, 0] = (int)card.myEffects[i];
-            card.encodedEffectArray[i, 1] = card.myValues[i];
-            card.encodedEffectArray[i, 2] = card.myExtraValues[i];
+            card.effectTypeArr[i] = (int)card.myEffects[i];
+            card.mod1Arr[i] = card.myValues[i];
+            card.mod2Arr[i] = card.myExtraValues[i];
         }
     }
 

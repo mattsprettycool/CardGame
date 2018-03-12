@@ -13,23 +13,23 @@ public class EffectManager : MonoBehaviour {
     void DoEffect(Card c, int x, int y)
     {
         //int[,] testEffect = { { 1, 2 }, { 2, 4 }, { 3, 1 } };
-        for(int i = 0; i < c.encodedEffectArray.GetLength(0); i++)
+        for(int i = 0; i < c.effectTypeArr.GetLength(0); i++)
         {//NEEDS 2 MODS
-            switch (c.encodedEffectArray[i, 0])
+            switch (c.effectTypeArr[i])
             {
                 case 0:
                     break;
                 case 1:
-                    DoNumericalDamage(c.encodedEffectArray[i, 1], x, y);
+                    DoNumericalDamage(c.mod1Arr[i], x, y);
                     break;
                 case 2:
-                    DoMaterialBasedDamage(c.encodedEffectArray[i, 1], x, y);
+                    DoMaterialBasedDamage(c.mod1Arr[i], x, y);
                     break;
                 case 3:
-                    DoDraw(c.encodedEffectArray[i, 1], x, y);
+                    DoDraw(c.mod1Arr[i], x, y);
                     break;
                 case 4:
-                    DoHeal(c.encodedEffectArray[1, i], x, y);
+                    DoHeal(c.mod1Arr[i], x, y);
                     break;
             }
         }
