@@ -24,7 +24,6 @@ public class TileCreator : MonoBehaviour {
         {
             for(int y = 0; y < rows; y++)
             {
-                Debug.Log("a");
                 Instantiate(tile, new Vector3(startPoint.x+(xOffset*x)+(yIterXOffset*y), startPoint.y+(yOffset*y), 0), transform.rotation);
             }
         }

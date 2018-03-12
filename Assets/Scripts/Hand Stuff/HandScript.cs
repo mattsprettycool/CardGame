@@ -24,10 +24,11 @@ public class HandScript : MonoBehaviour {
 		}
 	}
 	public void DrawCard(){
-		handArray [numCards] = d.AddAndRemoveCard (0);
-		Instantiate (posToPutCard, gameObject.transform);
-		numCards++;
-
-
+        if (!d.IsEmpty())
+        {
+            handArray[numCards] = d.AddAndRemoveCard(0);
+            Instantiate(posToPutCard, gameObject.transform);
+            numCards++;
+        }
 	}
 }

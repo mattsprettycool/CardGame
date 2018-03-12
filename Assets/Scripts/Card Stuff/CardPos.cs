@@ -12,7 +12,7 @@ public class CardPos : MonoBehaviour {
 		d = GameObject.FindGameObjectWithTag ("CardHandler").GetComponent<Deck> ();
 		hand = GameObject.FindGameObjectWithTag ("Hand").GetComponent<HandScript> ();
 		GameObject cardo = Instantiate (cardTemplate, gameObject.transform);
-		cardo.GetComponent<CardReader> ().SetCard (hand.handArray [hand.numCards]);
+		cardo.GetComponent<CardReader> ().SetCard (hand.handArray [hand.numCards-1]);
 		cardo.GetComponent<CardReader> ().SetScale (.5f, .5f, .5f);
 	}
 	
